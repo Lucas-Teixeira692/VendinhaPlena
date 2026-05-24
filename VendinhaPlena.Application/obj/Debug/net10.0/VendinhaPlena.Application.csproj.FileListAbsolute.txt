@@ -1,0 +1,17 @@
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.csproj.AssemblyReference.cache
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Application.deps.json
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Application.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Application.pdb
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Domain.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Infrastructure.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Domain.pdb
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\bin\Debug\net10.0\VendinhaPlena.Infrastructure.pdb
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\Vendinha.F4864B45.Up2Date
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\refint\VendinhaPlena.Application.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\VendinhaPlena.Application.pdb
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Application\obj\Debug\net10.0\ref\VendinhaPlena.Application.dll

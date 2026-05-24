@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="VendinhaPlena.Api/VendinhaPlena.Api.csproj" />
+  <Project Path="VendinhaPlena.Application/VendinhaPlena.Application.csproj" />
+  <Project Path="VendinhaPlena.Domain/VendinhaPlena.Domain.csproj" />
+  <Project Path="VendinhaPlena.Infrastructure/VendinhaPlena.Infrastructure.csproj" />
+</Solution>

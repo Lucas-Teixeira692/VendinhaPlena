@@ -1,0 +1,11 @@
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\bin\Debug\net10.0\VendinhaPlena.Domain.deps.json
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\bin\Debug\net10.0\VendinhaPlena.Domain.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\bin\Debug\net10.0\VendinhaPlena.Domain.pdb
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\VendinhaPlena.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\VendinhaPlena.Domain.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\VendinhaPlena.Domain.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\VendinhaPlena.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\VendinhaPlena.Domain.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\refint\VendinhaPlena.Domain.dll
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\VendinhaPlena.Domain.pdb
+C:\Users\lucas\OneDrive\Desktop\VendinhaPlena\VendinhaPlena.Domain\obj\Debug\net10.0\ref\VendinhaPlena.Domain.dll

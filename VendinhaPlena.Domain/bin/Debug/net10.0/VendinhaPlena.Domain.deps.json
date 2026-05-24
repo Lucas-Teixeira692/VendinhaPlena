@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "VendinhaPlena.Domain/1.0.0": {
+        "runtime": {
+          "VendinhaPlena.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VendinhaPlena.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
