@@ -16,7 +16,6 @@ namespace VendinhaPlena.Application.Services
 
         public async Task<Cliente> CriarClienteAsync(Cliente cliente)
         {
-            // Validar CPF básico
             if (!Regex.IsMatch(cliente.Cpf, @"^\d{11}$")) 
                 throw new ArgumentException("CPF inválido."); 
 
@@ -35,16 +34,45 @@ namespace VendinhaPlena.Application.Services
             if (!string.IsNullOrWhiteSpace(buscaNome))
                 query = query.Where(c => c.Nome.Contains(buscaNome)); 
 
-           
             var clientesOrdenados = await query.ToListAsync();
-            var clientes = clientesOrdenados
+            return clientesOrdenados
                 .OrderByDescending(c => c.TotalDividas)
                 .Skip((pagina - 1) * 10)
-                .Take(10) 
+                .Take(10)
                 .Select(c => new { c.Id, c.Nome, c.Cpf, c.Idade, c.TotalDividas }) 
                 .ToList();
+        }
 
-            return clientes;
+       
+        public async Task AtualizarClienteAsync(int id, Cliente dadosAtualizados)
+        {
+            var cliente = await _context.Clientes.FindAsync(id);
+            if (cliente == null) throw new Exception("Cliente não encontrado.");
+
+            cliente.Nome = dadosAtualizados.Nome;
+            cliente.Email = dadosAtualizados.Email;
+            cliente.DataNascimento = dadosAtualizados.DataNascimento;
+
+            await _context.SaveChangesAsync();
+        }
+
+       
+        public async Task ExcluirClienteAsync(int id)
+        {
+            var cliente = await _context.Clientes.FindAsync(id);
+            if (cliente == null) throw new Exception("Cliente não encontrado.");
+
+            _context.Clientes.Remove(cliente);
+            await _context.SaveChangesAsync();
+        }
+
+        
+        public async Task<IEnumerable<Divida>> ObterDividasPorClienteAsync(int clienteId)
+        {
+            return await _context.Dividas
+                .Where(d => d.ClienteId == clienteId)
+                .OrderByDescending(d => d.DataCriacao)
+                .ToListAsync();
         }
         
         public async Task AdicionarDividaAsync(int clienteId, decimal valor)
@@ -52,7 +80,6 @@ namespace VendinhaPlena.Application.Services
             var cliente = await _context.Clientes.Include(c => c.Dividas).FirstOrDefaultAsync(c => c.Id == clienteId);
             if (cliente == null) throw new Exception("Cliente não encontrado.");
 
-            
             if (cliente.Dividas.Any(d => !d.EstaPaga))
                 throw new InvalidOperationException("Cliente já possui uma dívida em aberto."); 
 
