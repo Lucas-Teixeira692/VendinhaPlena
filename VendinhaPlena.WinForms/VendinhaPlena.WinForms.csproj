@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\VendinhaPlena.Domain\VendinhaPlena.Domain.csproj" />
+    <ProjectReference Include="..\VendinhaPlena.Application\VendinhaPlena.Application.csproj" />
+    <ProjectReference Include="..\VendinhaPlena.Infrastructure\VendinhaPlena.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
