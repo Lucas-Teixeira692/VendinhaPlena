@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using VendinhaPlena.Application.Services;
 using VendinhaPlena.Domain.Entities;
 
@@ -16,51 +20,81 @@ namespace VendinhaPlena.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Criar([FromBody] Cliente cliente)
+        public IActionResult Criar([FromBody] Cliente cliente)
         {
-            try { return Ok(await _clienteService.CriarClienteAsync(cliente)); }
-            catch (Exception ex) { return BadRequest(ex.Message); }
+           
+            if (_clienteService.CriarCliente(cliente, out List<ValidationResult> erros))
+            {
+                return Ok(cliente);
+            }
+
+            
+            return BadRequest(erros.Select(e => e.ErrorMessage));
         }
 
         [HttpGet]
-        public async Task<IActionResult> Listar([FromQuery] string? busca, [FromQuery] int pagina = 1)
+        public IActionResult Listar([FromQuery] string? busca, [FromQuery] int pagina = 1)
         {
-            var clientes = await _clienteService.ObterClientesPaginadosAsync(busca, pagina);
+           
+            var clientes = _clienteService.ObterClientesPaginados(busca ?? string.Empty, pagina);
             return Ok(clientes);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Atualizar(int id, [FromBody] Cliente cliente)
+        public IActionResult Atualizar(int id, [FromBody] Cliente cliente)
         {
-            try { await _clienteService.AtualizarClienteAsync(id, cliente); return Ok(); }
-            catch (Exception ex) { return BadRequest(ex.Message); }
+            if (_clienteService.AtualizarCliente(id, cliente, out List<ValidationResult> erros))
+            {
+                return Ok();
+            }
+            return BadRequest(erros.Select(e => e.ErrorMessage));
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Excluir(int id)
+        public IActionResult Excluir(int id)
         {
-            try { await _clienteService.ExcluirClienteAsync(id); return Ok(); }
-            catch (Exception ex) { return BadRequest(ex.Message); }
+            try
+            {
+                _clienteService.ExcluirCliente(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/dividas")]
-        public async Task<IActionResult> ListarDividas(int id)
+        public IActionResult ListarDividas(int id)
         {
-            return Ok(await _clienteService.ObterDividasPorClienteAsync(id));
+            var dividas = _clienteService.ObterDividasPorCliente(id);
+            return Ok(dividas);
         }
 
         [HttpPost("{id}/dividas")]
-        public async Task<IActionResult> AdicionarDivida(int id, [FromBody] decimal valor)
+        public IActionResult AdicionarDivida(int id, [FromBody] decimal valor)
         {
-            try { await _clienteService.AdicionarDividaAsync(id, valor); return Ok(); }
-            catch (Exception ex) { return BadRequest(ex.Message); }
+            if (_clienteService.AdicionarDivida(id, valor, out List<ValidationResult> erros))
+            {
+                return Ok();
+            }
+            return BadRequest(erros.Select(e => e.ErrorMessage));
         }
 
         [HttpPatch("dividas/{dividaId}/pagar")]
-        public async Task<IActionResult> PagarDivida(int dividaId)
+        public IActionResult PagarDivida(int dividaId)
         {
-            try { await _clienteService.MarcarDividaComoPagaAsync(dividaId); return Ok(); }
-            catch (Exception ex) { return BadRequest(ex.Message); }
+            try
+            {
+                var sucesso = _clienteService.MarcarDividaComoPaga(dividaId);
+                if (sucesso) return Ok();
+
+                return BadRequest("Dívida não encontrada.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
