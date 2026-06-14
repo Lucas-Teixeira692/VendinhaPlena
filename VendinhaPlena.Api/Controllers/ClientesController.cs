@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -22,20 +21,17 @@ namespace VendinhaPlena.Api.Controllers
         [HttpPost]
         public IActionResult Criar([FromBody] Cliente cliente)
         {
-           
             if (_clienteService.CriarCliente(cliente, out List<ValidationResult> erros))
             {
                 return Ok(cliente);
             }
 
-            
             return BadRequest(erros.Select(e => e.ErrorMessage));
         }
 
         [HttpGet]
         public IActionResult Listar([FromQuery] string? busca, [FromQuery] int pagina = 1)
         {
-           
             var clientes = _clienteService.ObterClientesPaginados(busca ?? string.Empty, pagina);
             return Ok(clientes);
         }
@@ -53,15 +49,8 @@ namespace VendinhaPlena.Api.Controllers
         [HttpDelete("{id}")]
         public IActionResult Excluir(int id)
         {
-            try
-            {
-                _clienteService.ExcluirCliente(id);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            _clienteService.ExcluirCliente(id);
+            return Ok();
         }
 
         [HttpGet("{id}/dividas")]
@@ -84,17 +73,14 @@ namespace VendinhaPlena.Api.Controllers
         [HttpPatch("dividas/{dividaId}/pagar")]
         public IActionResult PagarDivida(int dividaId)
         {
-            try
-            {
-                var sucesso = _clienteService.MarcarDividaComoPaga(dividaId);
-                if (sucesso) return Ok();
+            var sucesso = _clienteService.MarcarDividaComoPaga(dividaId);
 
-                return BadRequest("Dívida não encontrada.");
-            }
-            catch (Exception ex)
+            if (sucesso)
             {
-                return BadRequest(ex.Message);
+                return Ok();
             }
+
+            return BadRequest("Dívida não encontrada.");
         }
     }
 }

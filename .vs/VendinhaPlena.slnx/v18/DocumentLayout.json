@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\OneDrive\\Desktop\\VendinhaPlena\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C52B5EE5-E35A-9622-73EF-D74D0C14CFE6}|VendinhaPlena.Domain\\VendinhaPlena.Domain.csproj|c:\\users\\lucas\\onedrive\\desktop\\vendinhaplena\\vendinhaplena.domain\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C52B5EE5-E35A-9622-73EF-D74D0C14CFE6}|VendinhaPlena.Domain\\VendinhaPlena.Domain.csproj|solutionrelative:vendinhaplena.domain\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A0C657E-18FC-7529-1216-01688B71CBC4}|VendinhaPlena.Api\\VendinhaPlena.Api.csproj|c:\\users\\lucas\\onedrive\\desktop\\vendinhaplena\\vendinhaplena.api\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A0C657E-18FC-7529-1216-01688B71CBC4}|VendinhaPlena.Api\\VendinhaPlena.Api.csproj|solutionrelative:vendinhaplena.api\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C52B5EE5-E35A-9622-73EF-D74D0C14CFE6}|VendinhaPlena.Domain\\VendinhaPlena.Domain.csproj|c:\\users\\lucas\\onedrive\\desktop\\vendinhaplena\\vendinhaplena.domain\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C52B5EE5-E35A-9622-73EF-D74D0C14CFE6}|VendinhaPlena.Domain\\VendinhaPlena.Domain.csproj|solutionrelative:vendinhaplena.domain\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{244ADC6E-3AB6-1FDF-06DF-7BB5CD82A17D}|VendinhaPlena.Application\\VendinhaPlena.Application.csproj|c:\\users\\lucas\\onedrive\\desktop\\vendinhaplena\\vendinhaplena.application\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -38,12 +38,11 @@
               "RelativeToolTip": "VendinhaPlena.Domain\\Entities\\Divida.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:30:15.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-14T16:30:15.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VendinhaPlena\\VendinhaPlena.Domain\\Entities\\Cliente.cs",
               "RelativeDocumentMoniker": "VendinhaPlena.Domain\\Entities\\Cliente.cs",
@@ -56,13 +55,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ClientesController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VendinhaPlena\\VendinhaPlena.Api\\Controllers\\ClientesController.cs",
               "RelativeDocumentMoniker": "VendinhaPlena.Api\\Controllers\\ClientesController.cs",
               "ToolTip": "C:\\Users\\lucas\\OneDrive\\Desktop\\VendinhaPlena\\VendinhaPlena.Api\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "VendinhaPlena.Api\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowDIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-14T16:21:48.698Z",
               "EditorCaption": ""
@@ -77,8 +76,7 @@
               "RelativeToolTip": "VendinhaPlena.Application\\Services\\ClienteService.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAwwHUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T15:59:59.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-14T15:59:59.751Z"
             }
           ]
         }
